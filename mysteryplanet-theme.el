@@ -127,4 +127,12 @@
 
 (eval-after-load "rainbow-delimiters" '(mp-rainbow-delim-set-face))
 
+; TeX mode
+(defun mp-LaTeX-set-face ()
+  (set-face-attribute
+   'font-latex-italic-face nil
+   :foreground (mp-color mp-string-fg)))
+
+(eval-after-load "font-latex" '(mp-LaTeX-set-face))
+
 (provide-theme 'mysteryplanet)
