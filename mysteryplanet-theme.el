@@ -127,6 +127,20 @@
 
 (eval-after-load "rainbow-delimiters" '(mp-rainbow-delim-set-face))
 
+;; Powerline
+(defun mp-powerline-set-face ()
+  (set-face-attribute
+   'mode-line nil
+   :background (mp-color mp-default-bg)
+   :box nil)
+  (set-face-attribute
+   'mode-line-inactive nil
+   :foreground (mp-color mp-default-bg)
+   :box nil))
+
+(eval-after-load "powerline" '(mp-powerline-set-face))
+   
+   
 ; TeX mode
 (defun mp-LaTeX-set-face ()
   (set-face-attribute
